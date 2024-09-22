@@ -104,6 +104,8 @@ img {
   padding-top: 0;
   padding-bottom: 0;
   border-bottom: 1px solid var(--accent-color);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .top-line .container {
@@ -175,7 +177,7 @@ img {
 }
 
 .menu-item.active::after {
-  background: var(--pressed-state-color);
+  background: #404bbf;
 }
 
 .contacts {
@@ -221,6 +223,8 @@ img {
     url(/images/img_people_office.jpg);
   background-repeat: no-repeat;
   max-width: 1440px;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-image-title {
@@ -235,7 +239,7 @@ img {
 }
 
 .hero-image-button {
-  background-color: var(--primary-brand-color);
+  background-color: #4d5ae5;
   color: var(--white-background-color);
   cursor: pointer;
   font-size: 16px;
@@ -379,11 +383,16 @@ img {
   overflow: hidden;
 }
 
-.overlay {
+.overlay-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: var(--light-color);
   position: absolute;
   top: 0;
   left: 0;
-  background-color: var(--primary-brand-color);
+  background-color: #4d5ae5;
   width: 100%;
   height: 100%;
   padding-top: 40px;
@@ -395,16 +404,8 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.overlay-text {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: 0.02em;
-  color: var(--light-color);
-}
-
-.portfolio-item:hover .overlay {
-  transform: translateY(0);
+.portfolio-item:hover .overlay-text {
+  transform: translateY(0%);
 }
 
 .portfolio-item:hover {
@@ -439,6 +440,7 @@ img {
 .footer {
   background-color: var(--dark-color);
   padding: 100px 0;
+  align-items: baseline;
 }
 
 .footer-container {
@@ -476,10 +478,13 @@ img {
 }
 
 .footer-socials-text {
-  color: var(--light-color);
-  font-size: 18px;
+  color: #FFFFFF;
+  font-size: 16px;
   margin-bottom: 16px;
   align-self: flex-start;
+   font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
 }
 
 .socials {
@@ -498,11 +503,19 @@ img {
   align-items: center;
   width: 40px;
   height: 40px;
-  background-color: var(--primary-brand-color);
+  background-color: #4d5ae5;
   border-radius: 50%;
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon a {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  width: 100%; 
+  height: 100%; 
 }
 
 .icon-image {
