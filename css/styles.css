@@ -159,6 +159,10 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.menu li:first-child .menu-item {
+  color: #404bbf; 
+}
+
 .menu-item:hover,
 .menu-item:focus {
   color: #404bbf;
@@ -220,7 +224,7 @@ img {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(/images/img_people_office.jpg);
+    url(./images/img_people_office.jpg);
   background-repeat: no-repeat;
   max-width: 1440px;
   background-position: center;
@@ -395,9 +399,7 @@ img {
   background-color: #4d5ae5;
   width: 100%;
   height: 100%;
-  padding-top: 40px;
-  padding-right: 32px;
-  padding-left: 32px;
+  padding: 40px 32px;
   transform: translateY(100%);
   transition-property: transform;
   transition-duration: 250ms;
@@ -440,12 +442,12 @@ img {
 .footer {
   background-color: var(--dark-color);
   padding: 100px 0;
-  align-items: baseline;
 }
 
 .footer-container {
   display: flex;
   align-items: flex-start;
+  align-items: baseline;
 }
 
 .footer-info {
@@ -516,6 +518,9 @@ img {
   align-items: center; 
   width: 100%; 
   height: 100%; 
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .icon-image {
@@ -524,8 +529,8 @@ img {
   fill: var(--light-color);
 }
 
-.socials .icon:hover {
-  background-color: var(--pressed-state-color);
+.socials .icon a:hover, .socials .icon a:focus {
+  background-color: #404bbf;
 }
 
 .footer-socials .socials {
@@ -538,8 +543,14 @@ img {
   height: 24px;
 }
 
-.footer-socials .icon:hover {
-  background-color: var(--success-color);
+.footer-socials .icon a {
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-socials .icon a:hover,  .footer-socials .icon a:focus {
+  background-color: #31d0aa;
 }
 
 .feature-item-icon {
